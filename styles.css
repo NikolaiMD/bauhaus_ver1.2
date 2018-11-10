@@ -1,0 +1,275 @@
+body{
+  background-color: #272727;
+  font-family: arial;
+  height: 10000px;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: #cee002;
+}
+.container{
+  margin-right: 70px;
+  margin-left: 60px;
+  overflow: hidden;
+}
+nav.container{
+  width: 1220px;
+  height: 100px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  position: sticky;
+  background-color: #272727;
+  top: 0;
+  z-index: 1000;
+}
+nav.container li{
+  float: left;
+}
+/*************************ЛЕВЫЙ СЕКТОР НАВИГАЦИИ***************************/
+.brand{
+  position: relative;
+  float: left;
+  width: 780px;
+  height: 32px;
+}
+.logo:before{
+  content: "\25AC";
+  color: #272727;
+  display: block;
+  transform: rotate(-45deg) translate(-10px, -6px);
+}
+.logo{
+  display: block;
+  height: 22px;
+  width: 22px;
+  border: 5px solid white;
+}
+.first{
+  display: block;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  width: 0;
+  height: 0;
+  top: -35px;
+  left: 45px;
+  color: white;
+}
+.brand>li:first-child>a span:last-child{
+  display: block;
+  position: relative;
+  font-size: 13px;
+  width: 0;
+  height: 0;
+  color: grey;
+  top: -11px;
+  left: 45px;
+}
+.brand>li:last-child{
+  float: right;
+  margin-top: 11px;
+}
+.brand>li:last-child>a{
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.brand>li:last-child>a>span{
+  color: grey;
+  text-transform: uppercase;
+}
+/***********************ПРАВЫЙ СЕТОР НАВИГАЦИИ******************************/
+.menu{
+  position: relative;
+  float: right;
+  height: 46px;
+  width: 400px;
+  border-left: 1px solid grey;
+  margin-top: -3px;
+}
+.menu>li:first-child{
+  margin-left: 60px;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.menu>li:nth-child(2),li:nth-child(3),li:nth-child(4),li:nth-child(5){
+  margin-top: 14px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.menu>li:last-child{
+  margin-top: 10px;
+  margin-left: 113px;
+  font-size: 25px;
+}
+/*************************CAROUSEL CONTAINER*****************************/
+#carousel{
+  position: relative;
+}
+#carousel img{
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  min-height: 400px;
+}
+/*************************FIGCAPTION DEFAULT**************************/
+#carousel figcaption{
+  position: absolute;
+  top: 13%;
+  left: 25%;
+  width: 170px;
+  height: 350px;
+  padding: 45px 30px 30px 35px;
+  box-sizing: border-box;
+}
+/****************************FIGCAPTION FILL*************************/
+/****************************FIGCAPTION HEADER***********************/
+#carousel figcaption h2{
+  position: relative;
+  overflow: hidden;
+  width: 85px;
+  height: 15px;
+  color: white;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+}
+#carousel figcaption h2>span{
+  position: relative;
+  right: -100px;
+  -webkit-animation: ease-out 2s header_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes header_anim{
+  0%{letter-spacing: 10px;}
+  50%{letter-spacing: 6px;}
+  100%{ right: 0; letter-spacing: -0.5px;}
+}
+/****************************FIGCAPTION DESCRIPTION***********************/
+#carousel figcaption p{
+  overflow: hidden;
+  position: relative;
+  left: 20px;
+  z-index: 999;
+  width: 300px;
+  margin-top: 20px;
+  color: white;
+  font-family: arial;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 1px black;
+  -webkit-animation: ease-out 1s par_back_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+  }
+  @-webkit-keyframes par_back_anim{
+  0%{}
+  100%{ left: 0;}
+  }
+#carousel figcaption p>span{
+  display: block;
+  position: relative;
+  left: -50px;
+  letter-spacing: -20px;
+  -webkit-animation: ease-out 2s par_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes par_anim{
+0%{}
+100%{left: 0; letter-spacing: -0.5px;}
+}
+/****************************FIGCAPTION HREF***********************/
+#carousel figcaption a{
+  overflow: hidden;
+  position: absolute;
+  left: 60px;
+  bottom: 35px;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 1px black;
+  -webkit-animation: ease-out 2s ref_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes ref_anim{
+  0%{}
+  100%{left: 35px;}
+}
+#carousel figcaption a>span{
+  position: relative;
+  left: -100px;
+  -webkit-animation: ease-out 2s back_ref_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s
+}
+@-webkit-keyframes back_ref_anim{
+  0%{}
+  100%{left: 0;}
+}
+/*******************АНИМАЦИЯ РАМКИ*************************/
+#carousel figcaption div:nth-child(4){
+  height: 3px;
+  background-color: #cee002;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: ease-out 0.7s top;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes top{
+  0%{width: 0;}
+  100%{width: 170px;}
+}
+#carousel figcaption div:nth-child(5){
+  width: 3px;
+  background-color: #cee002;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-animation: ease-out 0.7s right;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes right{
+  0%{height: 0;}
+  100%{height: 350px;}
+}
+#carousel figcaption div:nth-child(6){
+  height: 3px;
+  background-color: #cee002;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: ease-out 0.7s bottom;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes bottom{
+  0%{width: 0;}
+  100%{width: 170px;}
+}
+#carousel figcaption div:nth-child(7){
+  width: 3px;
+  background-color: #cee002;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: ease-out 0.7s left;
+  animation-delay: 2.1s;
+  animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes left{
+  0%{height: 0;}
+  100%{height: 350px;}
+  }
+/***********************************************************************/
